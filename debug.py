@@ -2,9 +2,8 @@ import tkinter
 import tkinter.messagebox
 import customtkinter
 
-customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
-
+customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
+customtkinter.set_default_color_theme("dark-blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -161,4 +160,6 @@ class App(customtkinter.CTk):
 
 if __name__ == "__main__":
     app = App()
+    app.attributes("-fullscreen", "True")
+    app._state_before_windows_set_titlebar_color = 'zoomed'
     app.mainloop()
