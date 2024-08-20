@@ -35,6 +35,13 @@ class App(customtkinter.CTk):
         self.scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["80%", "90%", "100%", "110%", "120%"],command=self.change_scaling_event)
         self.scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
 
+
+        self.Main = customtkinter.CTkButton(self.sidebar_frame,text="Main")
+        self.Main.grid(row=2, column=0, padx=20, pady=(2,5))
+
+        self.Settings = customtkinter.CTkButton(self.sidebar_frame,text="Settings")
+        self.Settings.grid(row=3, column=0, padx=20, pady=(2,5))
+
         #Default Values
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
